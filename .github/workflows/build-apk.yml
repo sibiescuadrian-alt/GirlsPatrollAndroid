@@ -33,6 +33,8 @@ jobs:
       - name: Create Android project
         run: |
           mkdir -p app/src/main/assets
+                   mkdir -p app/src/main/res/drawable-nodpi
+          cp icon.png app/src/main/res/drawable-nodpi/icon.png
           mkdir -p app/src/main/java/com/girlspatrol/huntrix
 
           cp Girls_Patroll_Huntrix-17.html app/src/main/assets/index.html
@@ -85,6 +87,7 @@ jobs:
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
               <application
                   android:theme="@android:style/Theme.Material.Light.NoActionBar"
+                  android:icon="@drawable/icon"
                   android:label="Girls Patroll Huntrix"
                   android:usesCleartextTraffic="true">
                   <activity
